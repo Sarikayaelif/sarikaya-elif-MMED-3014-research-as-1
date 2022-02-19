@@ -1,8 +1,6 @@
 <?php
  require_once "connection.php";
 
-
-    
         $db = new Database();
         $connection = $db->getConnection();
         $topic = $connection->prepare("SELECT * FROM topics INNER JOIN grades ON grades.id = topics.grades_id");
